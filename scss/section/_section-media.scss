@@ -1,0 +1,53 @@
+@media (min-width: 320px){
+    section {
+        .container{
+            .main-slider {
+                .slider-prices {
+                    .items {
+                        img {
+                            width: 80%;
+                            height: 70%;
+                        }
+        
+                        .items__bottom-text {
+                            h2 {
+                                font-size: 25px;
+                            }
+                            span{
+                                margin: 0 0 50px 0;
+                            }
+                            .text__btn{
+                                a{
+                                    img{
+                                        display: none;
+                                    }
+                                    svg{
+                                        width: 250px;
+                                        height: 50px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 992px){
+    section{
+        .container{
+            .main-slider{
+                .slider-prices{
+                    .items{
+                        .items__bottom-text{
+                            h2{
+                                font-size: 34px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

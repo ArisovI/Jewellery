@@ -1,0 +1,53 @@
+.deserve {
+    margin-top: 155px;
+    .container {
+        .deserve-main {
+            background-image: url('../imgs/img_secondgirl.png');
+            background-size: 70%, 70%;
+            background-repeat: no-repeat;
+            background-position: 103% 100%;
+            height: 700px;
+            @include flex(column, flex-start, flex-start);
+
+            .text {
+                width: 50%;
+                height: 100%;
+                @include flex(column, space-evenly, flex-start);
+
+                h2 {
+                    @include font-f('Playfair Display', 38px, $blackColor, none);
+                    line-height: 51px;
+                    width: 70%;
+                }
+
+                p {
+                    @include font-f('Roboto', 17px, $greyFColor, none);
+                    line-height: 35px;
+                }
+            }
+
+            .main-slider {
+                width: 50%;
+                height: 100%;
+
+                .item {
+                    @include flex(column, center, center);
+                    background: $whiteColor;
+                    padding: 25px;
+                    margin: 15px;
+                    box-shadow: 0 0 15px black;
+                    @include font-f('Playfair Display', 17px, $greyFColor, none);
+
+                    img {
+                        width: 100px;
+                        height: 100px;
+                    }
+
+                    span {
+                        margin: 10px 0;
+                    }
+                }
+            }
+        }
+    }
+}

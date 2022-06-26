@@ -1,0 +1,173 @@
+@media (min-width: 320px) {
+    .updates {
+        height: 100%;
+
+        .container {
+            .updates-content {
+                @include flex(column, center, center);
+
+                .updates-content__left {
+                    .text {
+                        p {
+                            font-size: 18px;
+                            margin: 10px 0;
+                        }
+
+                        span {
+                            font-size: 14px;
+                        }
+                    }
+                }
+
+                .updates-content__right {
+
+                    .top,
+                    .bottom {
+
+                        .top__inside,
+                        .bottom__inside {
+                            .text {
+                                padding: 5.5px;
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .text__btn {
+                padding-bottom: 10px;
+
+                a {
+                    img {
+                        display: none;
+                    }
+
+                    svg {
+                        width: 200px;
+                        height: 50px;
+                    }
+                }
+            }
+
+            .heading {
+                h2 {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) {
+    .updates {
+        .container {
+            .text__btn {
+                @include flex(row, center, center);
+
+                a {
+                    img {
+                        display: block;
+                    }
+
+                    svg {
+                        width: 250px;
+                        height: 55px;
+                    }
+                }
+            }
+
+            .updates-content {
+                .updates-content__left {
+                    .text {
+                        p {
+                            font-size: 19px;
+                            margin: 10px 0;
+                        }
+
+                        span {
+                            font-size: 16px;
+                        }
+                    }
+                }
+
+                .updates-content__right {
+
+                    .top,
+                    .bottom {
+
+                        .top__inside,
+                        .bottom__inside {
+                            .text {
+                                padding: 11.5px;
+                                font-size: 17px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .updates {
+        .container {
+            .text__btn {
+                @include flex(row, flex-end, flex-end);
+                padding-bottom: 20px;
+
+                a {
+                    img {
+                        display: block;
+                    }
+
+                    svg {
+                        width: 290px;
+                        height: 62px;
+                    }
+                }
+            }
+
+            .updates-content {
+                @include flex(row, flex-start, flex-start);
+
+                .updates-content__left {
+                    .text {
+                        padding: 13.5px;
+
+                        p {
+                            font-size: 22px;
+                            margin: 15px 0;
+                        }
+
+                        span {
+                            font-size: 17px;
+                        }
+                    }
+                }
+
+                .updates-content__right {
+
+                    .top,
+                    .bottom {
+
+                        .top__inside,
+                        .bottom__inside {
+                            .text {
+                                padding: 17.5px;
+                                font-size: 17px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .heading {
+                h2 {
+                    font-size: 38px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+/* -----HTML----- */
+
+@import 'mixins';
+@import 'varibales';
+@import 'reset';
+
+/* -----BODY----- */
+
+@import 'header/header';
+@import 'header/header-media';
+@import 'main/main';
+@import 'main/main-media';
+@import 'shining/shining';
+@import 'shining/shining-media';
+@import 'section/section';
+@import 'section/section-media';
+@import 'deserve/deserve';
+@import 'deserve/deserve-media';
+@import 'updates/updates';
+@import 'updates/updates-media';
+@import 'next/next';
+@import 'next/next-media';
+@import 'footer/footer';
+@import 'footer/footer-media';

@@ -1,0 +1,88 @@
+section {
+    .container {
+        .main-slider {
+            .slider-prices {
+                .items {
+                    border: 1px solid rgb(238, 232, 232);
+                    width: 350px;
+                    height: 350px;
+                    @include flex(column, center, center);
+                    position: relative;
+                    img {
+                        width: 70%;
+                        height: 70%;
+                    }
+                    .items__text {
+                        @include flex(column, center, center);
+                        h3{
+                            @include font-f('Playfair Display', 22px, $blackColor, none);
+                        }
+                        p{
+                            @include font-f('Roboto', 17px, $greyFColor, none); 
+                            margin: 10px 0;
+                        }
+                        span{
+                            @include font-f('Roboto', 21px, $greyFColor, none);
+                        }
+                    }
+                    .items__bottom-text{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        @include flex(column, center, center);
+                        bottom:-101%;
+                        transition: 1s;
+                        z-index: 2;
+                        background-image: url('../imgs/img_gold6.png');
+                        background-size: cover;
+                        .text__btn {
+                            a {
+                                @include font-f('Poppins', 18px, $whiteColor, uppercase);
+                                @include flex(row, space-evenly, center);
+                                width: 290px;
+                                height: 62px;
+                                img{
+                                    width: 10%;
+                                    height: 20%;
+                                }
+                
+                                svg {
+                                    position: absolute;
+                                    width: 290px;
+                                    height: 62px;
+                
+                                    rect {
+                                        width: 100%;
+                                        height: 100%;
+                                        stroke-width: 3;
+                                        stroke: $whiteColor;
+                                        stroke-dasharray: 90%, 150%, 110%;
+                                        transition: 1s;
+                                        fill: none;
+                                    }
+                                }
+                
+                                &:hover rect {
+                                    stroke-dasharray: 240%, 0%, 150%;
+                                }
+                            }
+                        }
+                        h2{
+                            @include font-f('Playfair Display', 34px, $whiteColor, none, 600);
+                            font-style: italic;
+                        }
+                        span{
+                            @include font-f('Poppins', 18px, $whiteColor, none);
+                            margin: 20px 0;
+                        }
+                    }
+                }
+                .items:hover{
+                    .items__bottom-text{
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

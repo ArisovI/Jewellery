@@ -1,0 +1,103 @@
+main {
+    height: 528px;
+    @include flex(column, center, center);
+
+    .caption {
+        h2 {
+            @include font-f('Playfair Display', 38px, #000, none);
+        }
+
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .main-slider {
+        .slider-ring {
+            .item {
+                @include flex(column, flex-end, center);
+                position: relative;
+                margin: 5px;
+                padding: 10px 0;
+
+                .top::after {
+                    content: '';
+                    position: absolute;
+                    width: 0%;
+                    height: 1%;
+                    background-color: $greyFColor;
+                    top: 0;
+                    left: 50%;
+                    transition: 1s;
+                }
+
+                .top::before {
+                    content: '';
+                    width: 1%;
+                    height: 0%;
+                    background-color: $greyFColor;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transition: 1s;
+                }
+
+                .left::after {
+                    content: '';
+                    position: absolute;
+                    width: 0%;
+                    height: 1%;
+                    background-color: $greyFColor;
+                    bottom: 0;
+                    left: 50%;
+                    transition: 1s;
+                }
+
+                .left::before {
+                    content: '';
+                    width: 1%;
+                    height: 0%;
+                    background-color: $greyFColor;
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    transition: 1s;
+                }
+
+                .picture {
+                    width: 230px;
+                    height: 200px;
+                    @include flex(row, center, center);
+
+                    img {
+                        width: 75%;
+                        height: 75%;
+                    }
+                }
+
+                .description {
+                    @include font-f('Playfair Display', 22px, #000, none);
+                }
+            }
+
+            .item:hover .top::after {
+                width: 100%;
+                left: 0;
+            }
+
+            .item:hover .top::before {
+                height: 100%;
+                top: 0;
+            }
+
+            .item:hover .left::after {
+                width: 100%;
+                left: 0;
+            }
+
+            .item:hover .left::before {
+                height: 100%;
+                top: 0;
+            }
+        }
+    }
+}

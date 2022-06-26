@@ -1,0 +1,227 @@
+header {
+    background-color: $pinkColor;
+    .header-top {
+        @include flex(row, space-around, center);
+
+        .logo {
+            a {
+                @include font-f('Poppins', calc(20px + 18 * (100vw / 1230)), white, none, 600);
+            }
+        }
+
+        .search {
+            margin-left: 50px;
+
+            .search__btn {
+                width: 50%;
+                outline: none;
+                border: none;
+                background-color: transparent;
+                border-radius: 5px;
+                padding-left: 5px;
+                margin: 0 15px;
+                transition: 1s;
+
+                &::placeholder {
+                    @include font-f('Poppins', 15px, white, none);
+                }
+
+                &:focus {
+                    outline: 1px solid white;
+                }
+            }
+        }
+
+        .menu {
+            @include flex(row, center, center);
+            margin-right: 90px;
+
+            .menu__btn {
+                display: none;
+            }
+
+            ul {
+                @include flex(row, center, center);
+
+                li {
+                    margin: 0 20px;
+
+                    a {
+                        @include font-f('Poppins', 14px, white, uppercase);
+                    }
+                }
+            }
+        }
+
+        .login {
+            @include flex(row, center, center);
+
+            .login__btn {
+                display: none;
+            }
+
+            & .login__btn:checked~.login__frame {
+                top: 0;
+            }
+
+            .login__frame {
+                position: absolute;
+                width: 100vw;
+                height: 100%;
+                border: 2px solid black;
+                @include pos-left(-100%, 0);
+                @include flex(row, center, center);
+                background-color: rgba(0, 0, 0, 0.800);
+                transition: 1s;
+
+                .login__info {
+                    @include flex(column, space-between, center);
+                    background-color: $pinkColor;
+                    padding: 20px;
+                    border-radius: 8px;
+                    width: 30%;
+                    height: 40%;
+
+                    .back-btn {
+                        display: none;
+                    }
+
+                    .back-btn:checked~.login__frame {
+                        top: -100%;
+                    }
+
+                    .back-label {
+                        position: relative;
+                        right: -50%;
+                        cursor: pointer;
+                        color: white;
+                        transform: scale(0.7)
+                    }
+
+                    h2 {
+                        @include font-f('sand-serif', 34px, white);
+                        margin-bottom: 30px
+                    }
+
+                    .email,
+                    .password {
+                        @include flex(row, space-between, center);
+                        @include font-f('Poppins', 16px, white, uppercase, 600);
+                        border: 1px solid white;
+                        margin-top: 10px;
+                        border-radius: 8px;
+                        padding: 10px;
+                        width: 100%;
+
+                        input {
+                            border-radius: 4px;
+                            outline: none;
+                            border: none;
+                            padding-left: 8px;
+                            margin-left: 20px;
+                        }
+                    }
+
+                    .button {
+                        @include flex(row, space-between, center);
+                        margin-top: 10px;
+                        width: 100%;
+
+                        input {
+                            padding: 3px 10px;
+                            border-radius: 8px;
+                            border: none;
+                            outline: none;
+                            @include font-f('Poppins', 14px, $greyFColor, uppercase, 600);
+
+                        }
+                    }
+                }
+            }
+
+            .login__icon {
+                border: 1px solid white;
+                border-radius: 50%;
+                @include flex(row, center, center);
+                width: 40px;
+                height: 40px;
+                margin: 0 0 0 25px;
+            }
+
+            .login__label span {
+                @include font-f('Poppins', 14px, white, uppercase);
+                cursor: pointer;
+            }
+        }
+    }
+
+    .header-content {
+        .main-slider {
+            max-width: 1200px;
+            margin: 0 auto;
+
+            .slider {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                .slick-slide {
+                    height: 100%;
+                    width: 100%;
+                }
+
+                .item {
+                    height: 100%;
+                    @include flex(row, space-between, center);
+
+                    .text {
+                        @include flex(column, space-between, center);
+                        height: 300px;
+
+                        .text__logo {
+                            @include font-f('Playfair Display', 55px, #ffff, none);
+                            line-height: 51px;
+
+                            span:nth-child(2) {
+                                @include font-f('Playfair Display', 119px, #ffff, none);
+                                font-style: italic;
+                                line-height: 81px;
+                            }
+                        }
+
+                        .text__btn {
+                            position: relative;
+                            left: -80px;
+                            a {
+                                @include font-f('Poppins', 18px, #ffff, uppercase);
+                                @include flex(row, space-around, center);
+                                width: 290px;
+                                height: 62px;
+
+                                svg {
+                                    position: absolute;
+                                    width: 290px;
+                                    height: 62px;
+
+                                    rect {
+                                        width: 100%;
+                                        height: 100%;
+                                        stroke-width: 3;
+                                        stroke: #fff;
+                                        stroke-dasharray: 90%, 150%, 110%;
+                                        transition: 1s;
+                                        fill: none;
+                                    }
+                                }
+
+                                &:hover rect {
+                                    stroke-dasharray: 240%, 0%, 150%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

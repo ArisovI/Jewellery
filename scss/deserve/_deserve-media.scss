@@ -1,0 +1,86 @@
+@media (min-width: 320px) {
+    .deserve {
+        margin-top: 50px;
+
+        .container {
+            .deserve-main {
+                background-image: url(none);
+                @include flex(column, center, center);
+                text-align: center;
+                height: 100%;
+
+                .text {
+                    width: 100%;
+
+                    h2 {
+                        width: 100%;
+                        font-size: 25px;
+                        line-height: 30px;
+                    }
+
+                    p {
+                        margin: 20px 0;
+                        line-height: 20px;
+                    }
+                }
+
+                .main-slider {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .deserve {
+        margin-top: 50px;
+
+        .container {
+            .deserve-main {
+                background-image: url('../imgs/img_secondgirl.png');
+                height: 700px;
+                @include flex(column, flex-start, flex-start);
+                text-align: left;
+                .text {
+                    width: 50%;
+                    height: 100%;
+                    @include flex(column, space-evenly, flex-start);
+    
+                    h2 {
+                        @include font-f('Playfair Display', 38px, $blackColor, none);
+                        line-height: 51px;
+                        width: 70%;
+                    }
+    
+                    p {
+                        @include font-f('Roboto', 17px, $greyFColor, none);
+                        line-height: 35px;
+                    }
+                }
+                .main-slider {
+                    width: 50%;
+                    height: 100%;
+    
+                    .item {
+                        @include flex(column, center, center);
+                        background: $whiteColor;
+                        padding: 25px;
+                        margin: 15px;
+                        box-shadow: 0 0 15px black;
+                        @include font-f('Playfair Display', 17px, $greyFColor, none);
+    
+                        img {
+                            width: 100px;
+                            height: 100px;
+                        }
+    
+                        span {
+                            margin: 10px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

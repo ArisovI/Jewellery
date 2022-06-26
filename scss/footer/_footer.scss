@@ -1,0 +1,83 @@
+footer {
+    padding: 30px 0;
+    .container {
+        .footer-text {
+            @include flex(row, space-between, center);
+
+            .shop {
+                @include flex(column, flex-start, flex-start);
+
+                h2 {
+                    margin: 20px 40px;
+
+                    @include font-f('Playfair Display', 22px, $greyFColor, none);
+                }
+
+                .shop-main {
+                    @include flex(row, center, flex-start);
+
+                    .shop__first,
+                    .shop__second {
+                        @include flex(column, flex-start, flex-start);
+
+                        a {
+                            @include font-f('Roboto', 15.5px, $greyFColor, none);
+                            margin: 18px 40px;
+
+                            &:hover {
+                                color: $pinkFColor;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .about {
+                @include flex(column, flex-start, flex-start);
+
+                h2 {
+                    @include font-f('Playfair Display', 22px, $greyFColor, none);
+                    margin: 20px 40px;
+
+                }
+
+                .about-main {
+                    @include flex(row, center, flex-start);
+
+                    .about__first,
+                    .about__second,
+                    .about__third {
+                        @include flex(column, flex-start, flex-start);
+
+                        a {
+                            @include font-f('Roboto', 15.5px, $greyFColor, none);
+                            margin: 18px 40px;
+
+                            span {
+                                margin-right: 20px;
+                            }
+
+                            &:hover {
+                                color: $pinkFColor;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgb(204, 201, 201);
+            @include flex(row, space-between, center);
+
+            a {
+                margin-top: 30px;
+                @include font-f('Roboto', 15px, $greyFColor, none);
+
+                &:hover {
+                    color: $pinkFColor;
+                }
+            }
+        }
+    }
+}

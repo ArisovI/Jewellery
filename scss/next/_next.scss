@@ -1,0 +1,50 @@
+.next {
+    background-image: url('../imgs/img_last.png');
+    height: 300px;
+    .container {
+        .next-main {
+            height: 300px;
+            position: relative;
+            @include flex(column, center, center);
+
+            h2 {
+                line-height: 65px;
+                @include font-f('Poppins', 38px, $whiteColor, none, 600);
+            }
+
+            p,
+            span {
+                line-height: 30px;
+                margin: 5px 0;
+                @include font-f('Playfair Display', 20px, $whiteColor, none);
+            }
+
+            .btn {
+                position: absolute;
+                bottom: -25px;
+                input[type='text']{
+                   width: 500px;
+                   height: 60px;
+                   padding-left: 20px;
+                   outline: none;
+                   border: none;
+                   margin-right: -5px;
+                   cursor: pointer;
+                   &::placeholder{
+                       @include font-f('Roboto', 16px, $greyFColor, none);
+                   }
+                }
+                input[type='submit']{
+                    width: 150px;
+                    cursor: pointer;
+                    height: 60px;
+                    outline: none;
+                    border: none;
+                    color: $whiteColor;
+                    background-color: $pinkFColor;
+                    @include font-f('Poppins', 15px, $whiteColor, none, 600);
+                }
+            }
+        }
+    }
+}
